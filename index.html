@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        console.log("Hello, this is a rock paper scissors game!")
+
+        function computerPlay(){
+            let randomNumber = Math.floor(Math.random()*3) + 1
+            if (randomNumber == 1){
+                return "Rock";
+            } else if (randomNumber == 2){
+                return "Scissors";
+            } else {
+                return "Paper";
+            }
+        }
+        console.log(computerPlay());
+
+        function playerSelection(){
+            let convertSelection
+            let selection = prompt("Write an option (Rock - Scissors - Paper)")
+            lowSelection= selection.toLowerCase();
+            newSelection = lowSelection.charAt(0).toUpperCase() + lowSelection.slice(1);
+            /*
+            if (newSelection = "Rock"){
+                convertSelection = 1;
+                return newSelection;
+            } else if (newSelection = "Scissors"){
+                convertSelection = 2;
+                return newSelection;
+            } else {
+                convertSelection= 3
+                return newSelection;
+            }
+            return convertSelection;
+          
+            */
+            return newSelection;
+        }
+
+        console.log(playerSelection());
+
+        function playRound(computerPlay, playerSelection){
+            if ("Rock" === "Rock" || "Paper" === "Papper"|| "Scissors" ==="Scissors" ){
+                return "Tie!";
+            } else if ("Rock" != "Paper"){
+                return "You lose!";
+            }
+
+        }
+        console.log(playRound(computerPlay, playerSelection));
+        
+    </script>
+
+</body>
+</html>
