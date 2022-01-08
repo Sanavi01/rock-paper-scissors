@@ -13,10 +13,13 @@
         function computerPlay(){
             let randomNumber = Math.floor(Math.random()*3) + 1
             if (randomNumber == 1){
+                objectCompu= "Rock"
                 return "Rock";
             } else if (randomNumber == 2){
+                objectCompu= "Scissors"
                 return "Scissors";
             } else {
+                objectCompu= "Paper"
                 return "Paper";
             }
         }
@@ -29,32 +32,44 @@
             newSelection = lowSelection.charAt(0).toUpperCase() + lowSelection.slice(1);
             /*
             if (newSelection = "Rock"){
-                convertSelection = 1;
-                return newSelection;
+                convertSelection = 1;     
             } else if (newSelection = "Scissors"){
                 convertSelection = 2;
-                return newSelection;
             } else {
                 convertSelection= 3
-                return newSelection;
             }
-            return convertSelection;
-          
             */
+          
+            
             return newSelection;
         }
 
         console.log(playerSelection());
 
         function playRound(computerPlay, playerSelection){
-            if ("Rock" === "Rock" || "Paper" === "Papper"|| "Scissors" ==="Scissors" ){
+            if (objectCompu === newSelection){
                 return "Tie!";
-            } else if ("Rock" != "Paper"){
-                return "You lose!";
+            } else if (newSelection == "Scissors") {
+                if (objectCompu=="Rock"){
+                    return "You lose!"
+                } else {
+                    return "You won!"
+                }
+            }else if (newSelection == "Paper"){
+                if(objectCompu=="Scissors"){
+                    return "You lose!"
+                } else {
+                    return "You won!"
+                }
+            }
+            
+
+            else{
+                return "You lose"
             }
 
         }
-        console.log(playRound(computerPlay, playerSelection));
+        console.log(playRound());
         
     </script>
 
