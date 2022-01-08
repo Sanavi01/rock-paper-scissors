@@ -50,27 +50,30 @@
             if (objectCompu === newSelection){
                 return "Tie!";
             } else if (newSelection == "Scissors") {
-                if (objectCompu=="Rock"){
+                if (objectCompu =="Rock"){
                     return "You lose!"
                 } else {
                     return "You won!"
                 }
-            }else if (newSelection == "Paper"){
-                if(objectCompu=="Scissors"){
+            } else if (newSelection == "Paper"){
+                if(objectCompu =="Scissors"){
+                    return "You lose!"
+                } else {
+                    return "You won!"
+                }
+            } else if (newSelection == "Rock"){
+                if(objectCompu == "Paper"){
                     return "You lose!"
                 } else {
                     return "You won!"
                 }
             }
             
-
-            else{
-                return "You lose"
-            }
-
         }
         console.log(playRound());
         
+        function game 
+
     </script>
 
 </body>
