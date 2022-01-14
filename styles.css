@@ -1,0 +1,46 @@
+body{
+    background-color: #E8EDDF;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    text-align: center;
+}
+
+.container {
+    display: flex;
+    padding: 10px;
+  flex-direction: column;
+}
+
+.container p{
+  font-size: 20px;
+}
+
+.title-information{
+    padding: 0px 500px;
+    text-align: center;
+    padding-bottom: 30px;
+}
+
+.title-information h1{
+    font-weight: bold;
+}
+.cards{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 52px;
+}
+
+.rock, .paper, .scissors{
+background-color: #0d1321a8;
+color: #FFB400;
+border-style: solid;
+border-width:6px;
+font-weight: bold;
+}
+
+.rock img, .paper img , .scissors img{
+    max-width: 150px;
+    justify-content: center;
+
+}
+
