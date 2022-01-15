@@ -12,99 +12,99 @@
 
 
 
-    <script>
-        /*
-        let computerPoints = 0;
-        let userPoints = 0;
+<script>
+    /*
+    let computerPoints = 0;
+    let userPoints = 0;
 
-        console.log("Hello, this is a rock paper scissors game!")
+    console.log("Hello, this is a rock paper scissors game!")
 
-        function computerPlay() {
-            let randomNumber = Math.floor(Math.random() * 3) + 1
-            if (randomNumber == 1) {
-                objectCompu = "Rock"
-                return "The computer selection was Rock";
-            } else if (randomNumber == 2) {
-                objectCompu = "Scissors"
-                return "The computer selecion was Scissors";
+    function computerPlay() {
+        let randomNumber = Math.floor(Math.random() * 3) + 1
+        if (randomNumber == 1) {
+            objectCompu = "Rock"
+            return "The computer selection was Rock";
+        } else if (randomNumber == 2) {
+            objectCompu = "Scissors"
+            return "The computer selecion was Scissors";
+        } else {
+            objectCompu = "Paper"
+            return "The computer selection was Paper";
+        }
+
+    }
+
+    function playerSelection() {
+        let convertSelection
+        let selection = prompt("Write an option (Rock - Scissors - Paper)")
+        lowSelection = selection.toLowerCase();
+        newSelection = lowSelection.charAt(0).toUpperCase() + lowSelection.slice(1);
+
+        return "Your selection was: " + newSelection;
+    }
+
+    function playRound(computerPlay, playerSelection) {
+
+        if (objectCompu === newSelection) {
+            return "Tie!";
+        } else if (newSelection == "Scissors") {
+            if (objectCompu == "Rock") {
+                computerPoints = computerPoints + 1
+                return "You lose!"
             } else {
-                objectCompu = "Paper"
-                return "The computer selection was Paper";
+                userPoints = userPoints + 1
+                return "You won!"
             }
-
-        }
-
-        function playerSelection() {
-            let convertSelection
-            let selection = prompt("Write an option (Rock - Scissors - Paper)")
-            lowSelection = selection.toLowerCase();
-            newSelection = lowSelection.charAt(0).toUpperCase() + lowSelection.slice(1);
-
-            return "Your selection was: " + newSelection;
-        }
-
-        function playRound(computerPlay, playerSelection) {
-
-            if (objectCompu === newSelection) {
-                return "Tie!";
-            } else if (newSelection == "Scissors") {
-                if (objectCompu == "Rock") {
-                    computerPoints = computerPoints + 1
-                    return "You lose!"
-                } else {
-                    userPoints = userPoints + 1
-                    return "You won!"
-                }
-            } else if (newSelection == "Paper") {
-                if (objectCompu == "Scissors") {
-                    computerPoints = computerPoints + 1
-                    return "You lose!"
-                } else {
-                    userPoints = userPoints + 1
-                    return "You won!"
-                }
-            } else if (newSelection == "Rock") {
-                if (objectCompu == "Paper") {
-                    computerPoints = computerPoints + 1
-                    return "You lose!"
-                } else {
-                    userPoints = userPoints + 1
-                    return "You won!"
-                }
-            }
-        }
-
-        function game() {
-            console.log("-------------")
-            console.log(playerSelection());
-            console.log(computerPlay());
-            console.log(playRound());
-            console.log("Your score: " + userPoints)
-            console.log("Computer score: " + computerPoints)
-        }
-
-        game();
-        game();
-        game();
-        game();
-        game();
-
-        function winner(){
-            if (computerPoints > userPoints){
-                return "Computer wins with " + computerPoints + " points!"
-            } else if (computerPoints < userPoints) {
-                return "You are the winner with " + userPoints + " points!"
+        } else if (newSelection == "Paper") {
+            if (objectCompu == "Scissors") {
+                computerPoints = computerPoints + 1
+                return "You lose!"
             } else {
-                return "Is a tie! Try again"
+                userPoints = userPoints + 1
+                return "You won!"
+            }
+        } else if (newSelection == "Rock") {
+            if (objectCompu == "Paper") {
+                computerPoints = computerPoints + 1
+                return "You lose!"
+            } else {
+                userPoints = userPoints + 1
+                return "You won!"
             }
         }
-        console.log("-----------");
-        console.log(winner());
+    }
+
+    function game() {
+        console.log("-------------")
+        console.log(playerSelection());
+        console.log(computerPlay());
+        console.log(playRound());
+        console.log("Your score: " + userPoints)
+        console.log("Computer score: " + computerPoints)
+    }
+
+    game();
+    game();
+    game();
+    game();
+    game();
+
+    function winner(){
+        if (computerPoints > userPoints){
+            return "Computer wins with " + computerPoints + " points!"
+        } else if (computerPoints < userPoints) {
+            return "You are the winner with " + userPoints + " points!"
+        } else {
+            return "Is a tie! Try again"
+        }
+    }
+    console.log("-----------");
+    console.log(winner());
 
 
 */
 
-    </script>
+</script>
 
 <body>
     <div class="container">
@@ -115,6 +115,16 @@
                 to children to help them settle arguments between themselves on their own without adult intervention
             </p>
         </div>
+        <div class="score">
+            <div class="userScore">
+                <p>Your score:</p>
+            </div>
+            <div class="computerScore">
+                <p>Computer Score:</p>
+            </div>
+        </div>
+
+
         <div class="cards">
             <div class="rock">
                 <img src="images/gesto-manual-puno-cerrado-levantado-o-puno-ilustracion-vector-boceto_163786-889-removebg-preview(1).png"
@@ -130,9 +140,11 @@
                     alt="scissors">
                 <p>Rock</p>
             </div>
+
+
         </div>
     </div>
-    
+
 
 
 
