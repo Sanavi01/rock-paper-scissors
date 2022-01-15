@@ -40,7 +40,12 @@ font-weight: bold;
 
 .rock img, .paper img , .scissors img{
     max-width: 150px;
+    height: 150px;
     justify-content: center;
 
+}
+.scissors img{
+  padding-left: 20px;
+  padding-right: 10px;
 }
 
