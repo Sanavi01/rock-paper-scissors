@@ -4,10 +4,9 @@ body{
     text-align: center;
 }
 
-.container {
-    display: flex;
-    margin: 20px 500px;
-    padding: 20px;
+.container{
+  display: flex;
+  margin: 20px 500px;
   flex-direction: column;
   background-color: rgb(255, 236, 218);
   border-style:groove;
@@ -19,7 +18,8 @@ body{
 
 .title-information{
     text-align: center;
-    padding-bottom: 30px;
+    background-color:bisque;
+    padding: 20px;
 }
 
 .title-information h1{
@@ -28,8 +28,8 @@ body{
 .cards{
   display: flex;
   justify-content: center;
-  align-items: center;
   gap: 52px;
+  padding: 20px;
 }
 
 .rock, .paper, .scissors{
@@ -56,9 +56,10 @@ font-weight: bold;
   justify-content: space-between;
   padding-bottom: 52px;
   align-items: center;
+  padding: 20px;
 }
 
-.userScore, .computerScore{
+.userScore, .computerScore, .winner{
   width: 200px;
   height: 70px;
   border-style: solid;
@@ -68,4 +69,22 @@ font-weight: bold;
   border-radius: 10px;
   font-weight: bold;
   border-width:4px;
+}
+
+.informationGame{
+  display: flex;
+  background-color: bisque;
+  padding: 20px;
+  justify-content: center;
+}
+
+.information{
+  width: 400px;
+  height: auto;
+  border-style: groove;
+  background-color: #E8EDDF;
+}
+
+.information h1{
+  font-size: 1.5em;
 }
