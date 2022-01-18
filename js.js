@@ -68,12 +68,6 @@ let start = 0;
         console.log("Computer score: " + computerPoints)
     }
 
-    game();
-    game();
-    game();
-    game();
-    game();
-
     function winner(){
         if (computerPoints > userPoints){
             return "Computer wins with " + computerPoints + " points!"
@@ -97,26 +91,23 @@ const paper = document.querySelector('.paper')
 const scissors = document.querySelector('.scissors')
 const information = document.querySelector('.information')
 
-
 function computerPlay() {
     let randomNumber = Math.floor(Math.random() * 3) + 1
     if (randomNumber == 1) {
         objectCompu = "Rock"
-        messageComputer = "The computer selection was Rock";
+        messageComputer = "The computer selection was Rock!";
 
     } else if (randomNumber == 2) {
         objectCompu = "Scissors"
-        messageComputer = "The computer selecion was Scissors";
+        messageComputer = "The computer selection was Scissors!";
 
     } else {
         objectCompu = "Paper"
-        messageComputer = "The computer selection was Paper";
+        messageComputer = "The computer selection was Paper!";
 
     }
     console.log(messageComputer);
 }
-
-
 
 function playerSelection() {
     rock.addEventListener('click', () => {
@@ -139,11 +130,9 @@ function playerSelection() {
         start = 1
         console.log(messageUser)
     })
-
 }
 
 function playRound(computerPlay, playerSelection) {
-
     if (objectCompu === userSelection) {
         return "Tie!";
     } else if (userSelection == "Scissors") {
@@ -155,7 +144,7 @@ function playRound(computerPlay, playerSelection) {
             return "You won!"
         }
     } else if (userSelection == "Paper") {
-        if (objectCompu == Scissors) {
+        if (objectCompu == "Scissors") {
             computerPoints = computerPoints + 1
             return "You lose!"
         } else {
@@ -171,21 +160,40 @@ function playRound(computerPlay, playerSelection) {
             return "You won!"
         }
     }
-
 }
 
-playerSelection();
+function logs() {
+    const logs = document.createElement('div')
+    logs.classList.add('info')
+    information.appendChild(logs)
+
+    const logUser = document.createElement('p')
+    logUser.classList.add('infoLogs')
+    logUser.textContent = messageUser
+    logs.appendChild(logUser);
+    
+    const logComputer = document.createElement('p')
+    logComputer.classList.add('infoLogs')
+    logComputer.textContent = messageComputer
+    logs.appendChild(logComputer);
+}
 
 function game() {
     computerPlay();
     console.log(playRound());
-    console.log("Your score: " + userPoints)
+    console.log("User score: " + userPoints)
     console.log("Computer score: " + computerPoints)
+    logs();
 }
+
+
+playerSelection();
 
 if (start == 1) {
     game();
 }
+
+
 /*
 function game() {
     console.log("-------------")

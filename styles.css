@@ -88,3 +88,14 @@ font-weight: bold;
 .information h1{
   font-size: 1.5em;
 }
+
+.info{
+  background-color: rgb(255, 235, 198);
+  margin: 10px;
+  border-style: groove;
+}
+
+.infoLogs{
+  padding: 5px 0px;
+  margin: 0px;
+}
