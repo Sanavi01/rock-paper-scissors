@@ -13,10 +13,8 @@ body{
 }
 
 .container p{
-  
   font-size: 20px;
 }
-
 
 
 .title-information{
@@ -67,6 +65,7 @@ font-weight: bold;
 }
 
 .userScore, .computerScore, .winner{
+  font-size: 20px;
   width: 200px;
   height: 70px;
   border-style: solid;
@@ -105,4 +104,10 @@ font-weight: bold;
 .infoLogs{
   padding: 5px 0px;
   margin: 0px;
+}
+
+.infoLogs-1{
+  padding: 5px 0px;
+  margin: 0px;
+  font-weight: bold;
 }

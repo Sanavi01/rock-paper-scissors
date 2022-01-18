@@ -83,9 +83,9 @@ let start = 0;
 
 // Dynamic Game
 
-const userScore = document.querySelector('.userScore')
+const userScore = document.querySelector('.userScore_1')
 const winnerSelect = document.querySelector('.winner')
-const computerScore = document.querySelector('.computerScore')
+const computerScore = document.querySelector('.computerScore_1')
 const rock = document.querySelector('.rock')
 const paper = document.querySelector('.paper')
 const scissors = document.querySelector('.scissors')
@@ -96,17 +96,13 @@ function computerPlay() {
     if (randomNumber == 1) {
         objectCompu = "Rock"
         messageComputer = "The computer selection was Rock!";
-
     } else if (randomNumber == 2) {
         objectCompu = "Scissors"
         messageComputer = "The computer selection was Scissors!";
-
     } else {
         objectCompu = "Paper"
         messageComputer = "The computer selection was Paper!";
-
     }
-    console.log(messageComputer);
 }
 
 function playerSelection() {
@@ -114,50 +110,47 @@ function playerSelection() {
         userSelection = "Rock"
         messageUser = "Your selection was Rock!"
         start = 1
-        console.log(messageUser)
     });
 
     paper.addEventListener("click", () => {
         userSelection = "Paper"
         messageUser = "Your selection was Paper!"
         start = 1
-        console.log(messageUser)
     })
 
     scissors.addEventListener('click', () => {
         userSelection = "Scissors"
         messageUser = "Your selection was Scissors!"
         start = 1
-        console.log(messageUser)
     })
 }
 
 function playRound(computerPlay, playerSelection) {
     if (objectCompu === userSelection) {
-        return "Tie!";
+        messageRound = "Tie!";
     } else if (userSelection == "Scissors") {
         if (objectCompu == "Rock") {
             computerPoints = computerPoints + 1
-            return "You lose!"
+            messageRound = "You lose!"
         } else {
             userPoints = userPoints + 1
-            return "You won!"
+            messageRound = "You won!"
         }
     } else if (userSelection == "Paper") {
         if (objectCompu == "Scissors") {
             computerPoints = computerPoints + 1
-            return "You lose!"
+            messageRound = "You lose!"
         } else {
             userPoints = userPoints + 1
-            return "You won!"
+            messageRound = "You won!"
         }
     } else if (userSelection == "Rock") {
         if (objectCompu == "Paper") {
             computerPoints = computerPoints + 1
-            return "You lose!"
+            messageRound = "You lose!"
         } else {
             userPoints = userPoints + 1
-            return "You won!"
+            messageRound = "You won!"
         }
     }
 }
@@ -171,21 +164,30 @@ function logs() {
     logUser.classList.add('infoLogs')
     logUser.textContent = messageUser
     logs.appendChild(logUser);
-    
+
     const logComputer = document.createElement('p')
     logComputer.classList.add('infoLogs')
     logComputer.textContent = messageComputer
     logs.appendChild(logComputer);
+
+    const logRound = document.createElement('p')
+    logRound.classList.add('infoLogs-1')
+    logRound.textContent = messageRound
+    logs.appendChild(logRound);
 }
+
+function reportScore() {
+    userScore.textContent = `Your Score: ${userPoints} `
+    computerScore.textContent = `Computer Score: ${computerPoints}`
+}
+
 
 function game() {
     computerPlay();
-    console.log(playRound());
-    console.log("User score: " + userPoints)
-    console.log("Computer score: " + computerPoints)
+    playRound();
     logs();
+    reportScore();
 }
-
 
 playerSelection();
 
@@ -193,17 +195,3 @@ if (start == 1) {
     game();
 }
 
-
-/*
-function game() {
-    console.log("-------------")
-    playerSelection();
-    computerPlay();
-    
-        console.log(playRound());
-        console.log("Your score: " + userPoints)
-        console.log("Computer score: " + computerPoints)
-    }
-}
-game();
-*/
