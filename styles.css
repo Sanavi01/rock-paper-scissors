@@ -6,20 +6,24 @@ body{
 
 .container{
   display: flex;
-  margin: 20px 500px;
+  margin: 20px 10px;
   flex-direction: column;
   background-color: rgb(255, 236, 218);
   border-style:groove;
 }
 
 .container p{
+  
   font-size: 20px;
 }
+
+
 
 .title-information{
     text-align: center;
     background-color:bisque;
     padding: 20px;
+    flex-wrap: wrap;
 }
 
 .title-information h1{
@@ -30,6 +34,7 @@ body{
   justify-content: center;
   gap: 52px;
   padding: 20px;
+  flex-wrap: wrap;
 }
 
 .rock, .paper, .scissors{
@@ -53,10 +58,12 @@ font-weight: bold;
 
 .score{
   display: flex;
-  justify-content: space-between;
+  justify-content: space-evenly;
   padding-bottom: 52px;
   align-items: center;
   padding: 20px;
+  flex-wrap: wrap;
+  gap: 20px;
 }
 
 .userScore, .computerScore, .winner{
@@ -79,7 +86,7 @@ font-weight: bold;
 }
 
 .information{
-  width: 400px;
+  width: 500px;
   height: auto;
   border-style: groove;
   background-color: #E8EDDF;
