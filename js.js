@@ -84,7 +84,7 @@ let start = 0;
 // Dynamic Game
 
 const userScore = document.querySelector('.userScore_1')
-const winnerSelect = document.querySelector('.winner')
+const winnerSelect = document.querySelector('.winner_1')
 const computerScore = document.querySelector('.computerScore_1')
 const rock = document.querySelector('.rock')
 const paper = document.querySelector('.paper')
@@ -109,20 +109,21 @@ function playerSelection() {
     rock.addEventListener('click', () => {
         userSelection = "Rock"
         messageUser = "Your selection was Rock!"
-        start = 1
+        game();
     });
 
     paper.addEventListener("click", () => {
         userSelection = "Paper"
         messageUser = "Your selection was Paper!"
-        start = 1
+       game();
     })
 
     scissors.addEventListener('click', () => {
         userSelection = "Scissors"
         messageUser = "Your selection was Scissors!"
-        start = 1
+        game();
     })
+
 }
 
 function playRound(computerPlay, playerSelection) {
@@ -181,17 +182,26 @@ function reportScore() {
     computerScore.textContent = `Computer Score: ${computerPoints}`
 }
 
+function winner(){
+    if (computerPoints > userPoints){
+        winnerSelect.textContent = "Computer is the winner!"
+    } else if (computerPoints < userPoints) {
+        winnerSelect.textContent = "You are the winner"
+    } else {
+        winnerSelect.textContent = "Is a tie! Try again"
+    }
+}
 
 function game() {
     computerPlay();
     playRound();
     logs();
     reportScore();
+    winner();
 }
 
 playerSelection();
 
-if (start == 1) {
-    game();
-}
+
+
 
