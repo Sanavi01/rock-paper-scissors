@@ -1,85 +1,5 @@
 let computerPoints = 0;
 let userPoints = 0;
-let start = 0;
-/*
-    console.log("Hello, this is a rock paper scissors game!")
-
-    function computerPlay() {
-        let randomNumber = Math.floor(Math.random() * 3) + 1
-        if (randomNumber == 1) {
-            objectCompu = "Rock"
-            return "The computer selection was Rock";
-        } else if (randomNumber == 2) {
-            objectCompu = "Scissors"
-            return "The computer selecion was Scissors";
-        } else {
-            objectCompu = "Paper"
-            return "The computer selection was Paper";
-        }
-
-    }
-
-    function playerSelection() {
-        
-        let selection = prompt("Write an option (Rock - Scissors - Paper)")
-        lowSelection = selection.toLowerCase();
-        newSelection = lowSelection.charAt(0).toUpperCase() + lowSelection.slice(1);
-
-        return "Your selection was: " + newSelection;
-    }
-
-    function playRound(computerPlay, playerSelection) {
-
-        if (objectCompu === newSelection) {
-            return "Tie!";
-        } else if (newSelection == "Scissors") {
-            if (objectCompu == "Rock") {
-                computerPoints = computerPoints + 1
-                return "You lose!"
-            } else {
-                userPoints = userPoints + 1
-                return "You won!"
-            }
-        } else if (newSelection == "Paper") {
-            if (objectCompu == "Scissors") {
-                computerPoints = computerPoints + 1
-                return "You lose!"
-            } else {
-                userPoints = userPoints + 1
-                return "You won!"
-            }
-        } else if (newSelection == "Rock") {
-            if (objectCompu == "Paper") {
-                computerPoints = computerPoints + 1
-                return "You lose!"
-            } else {
-                userPoints = userPoints + 1
-                return "You won!"
-            }
-        }
-    }
-
-    function game() {
-        console.log("-------------")
-        console.log(playerSelection());
-        console.log(computerPlay());
-        console.log(playRound());
-        console.log("Your score: " + userPoints)
-        console.log("Computer score: " + computerPoints)
-    }
-
-    function winner(){
-        if (computerPoints > userPoints){
-            return "Computer wins with " + computerPoints + " points!"
-        } else if (computerPoints < userPoints) {
-            return "You are the winner with " + userPoints + " points!"
-        } else {
-            return "Is a tie! Try again"
-        }
-    }
-    console.log("-----------");
-    console.log(winner());
-*/
 
 // Dynamic Game
 
@@ -197,11 +117,10 @@ function game() {
     playRound();
     logs();
     reportScore();
-    winner();
+    if(computerPoints == 5 || userPoints == 5){
+        winner();
+    }
 }
 
 playerSelection();
-
-
-
 
