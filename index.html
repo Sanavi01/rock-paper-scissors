@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="styles.css">
     <script src="js.js" defer></script>
     <title>Rock - Paper - Scissors</title>
+    </audio>
 </head>
 
 <body>
@@ -17,15 +18,15 @@
             <h1>Rock - Paper - Scissors</h1>
             <p>This is the Rock - Paper - Scissors game, is a classic scholar game that now you can play in your favorite browser!.
             </p>  
-            <p>You will play vs the computer, the first to get <b>5 points win the game!</b> Just select your card and look if you won the round. <b>Good luck!</b>
+            <p>You will play vs the computer, who gets <b>more points </b> in <b>five rounds</b> win the game. Just select your card and look if you won the round. <b>Good luck!</b>
             </p>
         </div>
         <div class="score">
             <div class="userScore">
                 <p class="userScore_1">Your Score: </p>
             </div>
-            <div class="winner">
-                <p class="winner_1">Winner: </p>
+            <div class="roundAndWinner">
+                <p class="roundAndWinner-p">Round</p>
             </div>
             <div class="computerScore">
                 <p class="computerScore_1">Computer Score: </p>
@@ -34,26 +35,32 @@
 
 
         <div class="cards">
-            <div class="rock">
+            <div class="rock card">
+                <audio></audio>
                 <img src="images/gesto-manual-puno-cerrado-levantado-o-puno-ilustracion-vector-boceto_163786-889-removebg-preview(1).png"
                     alt="rock">
                 <p>Rock</p>
             </div>
-            <div class="paper">
+            <div class="paper card">
+                <audio></audio>
                 <img src="images/54123281-una-mano-mano-que-muestra-cinco-dedos--removebg-preview.png" alt="hand">
                 <p>Paper</p>
             </div>
-            <div class="scissors">
+            <div class="scissors card">
+                <audio></audio>
                 <img src="images/pngtree-gesture-scissors-hand-cartoon-pose-image_1439363-removebg-preview.png" ;
                     alt="scissors">
                 <p>Scissors</p>
             </div>
-
         </div>
 
         <div class="informationGame">
             <div class="information">
                 <h1>Information Game!</h1>
+                <div class="info"></div>
+                <p class="userLog"></p>
+                <p class="computerLog"></p>
+                <p class="roundLog"></p>
 
             </div>
         </div>
