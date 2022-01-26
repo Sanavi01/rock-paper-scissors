@@ -94,14 +94,13 @@ function logs() {
     logRound.classList.add('infoLogs-1')
     logRound.textContent = messageRound
     logsGame.appendChild(logRound);
+
+    logsAnimation();
 }
 
-function reportScore() {
+function reportScoreAndRound() {
     userScore.textContent = `Your Score: ${userPoints} `
     computerScore.textContent = `Computer Score: ${computerPoints}`
-}
-
-function round() {
     roundAndWinner.textContent = `Round: ${counter} `
 }
 
@@ -113,10 +112,12 @@ function winner() {
     } else {
         roundAndWinner.textContent = "Is a tie! Try again"
     }
+    winnerAnimation();
 }
 
+//Effects and Animations 
+
 function soundEffect() {
-    //Click on cards
     const audioEffect = document.querySelector("audio");
     rock.addEventListener('click', () => {
         audioEffect.setAttribute("src", "sounds/button-click.mp3")
@@ -130,9 +131,8 @@ function soundEffect() {
         audioEffect.setAttribute("src", "sounds/button-click.mp3")
         audioEffect.play();
     });
-
 }
-//Winner sound
+
 function winnerEffect() {
     const winnerEffect = document.createElement("audio")
     if (computerPoints < userPoints) {
@@ -142,17 +142,29 @@ function winnerEffect() {
     }
     logsGame.appendChild(winnerEffect);
     winnerEffect.play();
-
 }
+
+function winnerAnimation(){
+    roundAndWinner.classList.add('animationWinnerLog')
+    const roundAndWinnerBox = document.querySelector('.roundAndWinner')
+    roundAndWinnerBox.classList.add('animationWinnerBox')
+}
+
+function logsAnimation() {
+    logsGame.classList.add('animationLogs')
+    setTimeout(function(){
+        logsGame.classList.remove('animationLogs')
+    },1000);
+}
+
+//End Effects and Animations
+
 function game() {
-    if (counter < 5) {
-        round();
-    }
     if (counter <= 5) {
         computerPlay();
         playRound();
         logs();
-        reportScore();
+        reportScoreAndRound();
     }
     if (counter == 5) {
         winner();

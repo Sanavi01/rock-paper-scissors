@@ -42,7 +42,9 @@ border-style: solid;
 border-width:5px;
 font-weight: bold;
 transition: all 0.25s;
+border-radius: 5%;
 }
+
 .rock:hover, .paper:hover, .scissors:hover{
   border-color: rgb(243, 178, 0);
   border-style: groove;
@@ -55,7 +57,7 @@ transition: all 0.25s;
 }
 
 
-.rock img, .paper img , .scissors img{
+.rock img, .paper img, .scissors img{
     max-width: 150px;
     height: 150px;
     justify-content: center;
@@ -87,7 +89,42 @@ transition: all 0.25s;
   border-radius: 10px;
   font-weight: bold;
   border-width:4px;
+  border-radius: 5%;
 }
+
+.animationWinnerLog{
+  animation-name: winnerLog;
+  animation-duration: 1.5s;
+  animation-direction: alternate;
+  animation-iteration-count: 2;
+  scale: 1.1;
+  color: #000000;
+}
+
+@keyframes winnerLog {
+  to{
+    scale: 1;
+    scale: 1.1;
+    color:saddlebrown;
+  }
+}
+
+.animationWinnerBox{
+  animation-name: winnerBox;
+  animation-duration: 1.5s;
+  animation-direction: alternate;
+  animation-iteration-count: 2;
+  background-color: rgb(165, 255, 106);
+    scale: 1.2;
+}
+
+@keyframes winnerBox {
+  to{
+    background-color: #fadc59;
+    scale: 1;
+  }
+}
+
 
 .informationGame{
   display: flex;
@@ -101,6 +138,7 @@ transition: all 0.25s;
   height: auto;
   border-style: groove;
   background-color: #E8EDDF;
+  border-radius: 5%;
 }
 
 .information h1{
@@ -111,6 +149,15 @@ transition: all 0.25s;
   background-color: rgb(255, 235, 198);
   margin: 10px;
   border-style: groove;
+  transition: 0.25s;
+  border-radius: 5%;
+}
+
+.info:hover{
+  scale: 1.04;
+  border-style:groove;
+  border-color:rgb(107, 63, 5);
+  background-color:blanchedalmond;
 }
 
 .infoLogs{
@@ -124,4 +171,35 @@ transition: all 0.25s;
   font-weight: bold;
 }
 
+.animationLogs{
+  animation-name: zoomIn;
+  animation-duration: 1s;
+}
+
+@keyframes zoomIn {
+  from{
+    opacity: 0%;
+    scale: 1.2;
+    background-color:rgb(171, 223, 236) ;
+  }
+  to{
+    opacity: 100%;
+    scale: 1;
+  }
+}
+
+.footer{
+  background-color: #fadc59;
+  border-style: solid;
+  border-width: 3px;
+  border-bottom: 0px;
+  border-right: 0px;
+  border-left: 0px;
+
+}
+
+.footer p{
+  font-weight: bold;
+  margin: 12px;
+}
 
