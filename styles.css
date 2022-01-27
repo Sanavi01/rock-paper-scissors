@@ -97,11 +97,13 @@ border-radius: 5%;
   animation-duration: 1.5s;
   animation-direction: alternate;
   animation-iteration-count: 2;
-  scale: 1.1;
-  color: #000000;
 }
 
 @keyframes winnerLog {
+  from{
+    scale: 1.1;
+    color: #000000;
+  }
   to{
     scale: 1;
     scale: 1.1;
@@ -114,11 +116,13 @@ border-radius: 5%;
   animation-duration: 1.5s;
   animation-direction: alternate;
   animation-iteration-count: 2;
-  background-color: rgb(165, 255, 106);
-    scale: 1.2;
 }
 
 @keyframes winnerBox {
+  from{
+    background-color: rgb(165, 255, 106);
+    scale: 1.2;
+  }
   to{
     background-color: #fadc59;
     scale: 1;
