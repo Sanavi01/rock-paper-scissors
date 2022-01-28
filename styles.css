@@ -101,12 +101,11 @@ border-radius: 5%;
 
 @keyframes winnerLog {
   from{
-    scale: 1.1;
+    transform: scale(1.1);
     color: #000000;
   }
   to{
-    scale: 1;
-    scale: 1.1;
+    transform: scale(1);
     color:saddlebrown;
   }
 }
@@ -121,11 +120,11 @@ border-radius: 5%;
 @keyframes winnerBox {
   from{
     background-color: rgb(165, 255, 106);
-    scale: 1.2;
+    transform: scale(1.2);
   }
   to{
     background-color: #fadc59;
-    scale: 1;
+    transform: scale(1);
   }
 }
 
@@ -158,7 +157,7 @@ border-radius: 5%;
 }
 
 .info:hover{
-  scale: 1.04;
+  transform: scale(1.04);
   border-style:groove;
   border-color:rgb(107, 63, 5);
   background-color:blanchedalmond;
@@ -183,12 +182,12 @@ border-radius: 5%;
 @keyframes zoomIn {
   from{
     opacity: 0%;
-    scale: 1.2;
+    transform: scale(1.2);
     background-color:rgb(171, 223, 236) ;
   }
   to{
     opacity: 100%;
-    scale: 1;
+    transform: scale(1);
   }
 }
 
