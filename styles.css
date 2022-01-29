@@ -9,7 +9,9 @@ body{
   margin: 20px 10px;
   flex-direction: column;
   background-color: rgb(255, 236, 218);
-  border-style:groove;
+  border-style: solid;
+  border-width: 3px;
+  border-color: black;
 }
 
 .container p{
@@ -97,13 +99,11 @@ border-radius: 5%;
   animation-duration: 1.5s;
   animation-direction: alternate;
   animation-iteration-count: 2;
+  transform: scale(1.1);
+  color: #000000;
 }
 
 @keyframes winnerLog {
-  from{
-    transform: scale(1.1);
-    color: #000000;
-  }
   to{
     transform: scale(1);
     color:saddlebrown;
@@ -115,13 +115,11 @@ border-radius: 5%;
   animation-duration: 1.5s;
   animation-direction: alternate;
   animation-iteration-count: 2;
+  background-color: rgb(165, 255, 106);
+  transform: scale(1.2);
 }
 
 @keyframes winnerBox {
-  from{
-    background-color: rgb(165, 255, 106);
-    transform: scale(1.2);
-  }
   to{
     background-color: #fadc59;
     transform: scale(1);
